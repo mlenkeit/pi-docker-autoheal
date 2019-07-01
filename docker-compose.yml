@@ -1,0 +1,10 @@
+version: '3'
+services:
+  autoheal:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      AUTOHEAL_CONTAINER_LABEL: all
